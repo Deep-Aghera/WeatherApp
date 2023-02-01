@@ -4,6 +4,7 @@ const path = require('path');
 const hbs = require('hbs');
 const geocode = require('../../WeatherApp/utils/geocode');
 const forecast = require('../../WeatherApp/utils/forecast');
+const port  = process.env.PORT || 3000;
 
 // path for config
 let publicDir = path.join(__dirname,"../public");
@@ -91,6 +92,6 @@ app.get('*',(req,res) => {
 })
 
 
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log("now we are running on 3000 port")
 })
